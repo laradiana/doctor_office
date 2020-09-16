@@ -1,2 +1,8 @@
-<h1>Appointments#new</h1>
-<p>Find me in app/views/appointments/new.html.erb</p>
+<h1>Add Appointment</h1>
+<%= form_with(model: [@doctor, @appointment], local: true, class: 'ui form') do |f| %>
+  <%= f.label :user %>
+  <%= f.select :user_id, @users.collect { |u| [u.full_name, u.id] }%>
+  <%= f.label :role %>
+  <%= f.select :role, ['doctor', 'client'] %>
+  <%= f.submit %>
+<% end %>
