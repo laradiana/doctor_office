@@ -1,5 +1,12 @@
 <h1><%= @doctor.full_name %></h1>
 
-<h2>Doctors</h2>
+<h2>Users</h2>
 
+<ul>
+  <% @doctor.users.each do |doctor| %>
+    <li>
+      <%= link_to user.name, user %>
+    </li>
+  <% end%>
+</ul>
 
