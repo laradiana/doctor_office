@@ -7,7 +7,7 @@
 <% @doctors.each do |doc| %>
 <ul>
   <li>
-      <%= link_to "Dr. #{name}'s Page'", doctor_path(doc) %>
+      <%= link_to Doctor.name, doctor_path(doc) %>
   </li>
 </ul>
 <% end %>

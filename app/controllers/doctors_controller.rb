@@ -44,11 +44,11 @@ class DoctorsController < ApplicationController
   private
 
   def set_doctor
-    @doctor = Doctors.find(params[:id])
+    @doctor = Doctor.find(params[:id])
   end
 
   def doctor_params
-    params.require (:doctor).permit(:name)
+    params.require(:doctor).permit(:name)
   end
 
 end
