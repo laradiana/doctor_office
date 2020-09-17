@@ -1,8 +1,13 @@
 <h1>Add Appointment</h1>
 <%= form_with(model: [@doctor, @appointment], local: true, class: 'ui form') do |f| %>
-  <%= f.label :user %>
-  <%= f.select :user_id, @users.collect { |u| [u.full_name, u.id] }%>
-  <%= f.label :role %>
-  <%= f.select :role, ['doctor', 'client'] %>
-  <%= f.submit %>
+  <%= f.label :first_name %>
+  <%= f.data_field :name, required:true%>
+<br />
+  <%= f.label :Last_name %>
+  <%= f.time_field :name, required: true%>
+<br />
+
+<%= f.label :user %>
+<%= f.select :user_id, User.all.collect {|u| (u.first_name, u.id)}%>
+  <%= f.submit nil%>
 <% end %>

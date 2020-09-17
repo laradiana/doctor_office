@@ -1,5 +1,5 @@
 class AppointmentsController < ApplicationController
-  before_action :set_course
+  before_action :set_doctor
   
   def index
     @appointments = @doctor.appointments
@@ -33,10 +33,11 @@ end
   end
 
   private
-    def set_course
+    def set_doctor
       @doctor = Doctor.find(params[:doctor_id])
     end
+
     def appointment_params
-      params.require(:appointment).permit(:role, :user_id)
+      params.require(:appointment).permit(:user_id)
     end
 end

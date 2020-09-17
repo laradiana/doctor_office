@@ -8,6 +8,7 @@ class DoctorsController < ApplicationController
   end
 
   def show
+    @appointments = @doctor.appointments
   end
 
   def new
@@ -47,7 +48,7 @@ class DoctorsController < ApplicationController
   end
 
   def doctor_params
-    params.require (:doctor).permit(:first_name, last_name)
+    params.require (:doctor).permit(:name)
   end
 
 end

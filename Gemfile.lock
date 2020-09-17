@@ -165,8 +165,6 @@ GEM
       rubyzip (>= 1.2.2)
     semantic-ui-sass (2.4.2.0)
       sass (>= 3.2)
-    simple_calendar (2.4.1)
-      rails (>= 3.0)
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -221,7 +219,6 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver
   semantic-ui-sass
-  simple_calendar (~> 2.0)
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)

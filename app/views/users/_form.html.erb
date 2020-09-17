@@ -1,0 +1,19 @@
+<%= form_with(model: @user, local: true, class: 'ui form') do |f| %>
+  <div class='field'>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, required: true %>
+  </div>
+  <div class='field'>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, required: true %>
+  </div>
+  <div class='field'>
+    <%= f.label :phone %>
+    <%= f.text_field :phone, required: true %>
+  </div>
+  <div class='field'>
+    <%= f.label :email %>
+    <%= f.text_field :email, required: true %>
+  </div>
+  <%= f.submit nil, class: "ui secondary button" %>
+<% end %>

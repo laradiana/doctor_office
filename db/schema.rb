@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2020_09_11_015104) do
   enable_extension "plpgsql"
 
   create_table "appointments", force: :cascade do |t|
+   
     t.string "role"
     t.bigint "user_id", null: false
     t.bigint "doctor_id", null: false
