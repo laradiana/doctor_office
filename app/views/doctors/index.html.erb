@@ -1,2 +1,16 @@
-<h1>Doctors#index</h1>
-<p>Find me in app/views/doctors/index.html.erb</p>
+<h1>Doctors</h1>
+
+<%= link_to 'Appointments', appointments_new_path %>
+<br />
+
+<% @appointments.each do |appointment| %>
+<ul>
+  <li>
+      <%= link_to appointment.role, appointment_path(appointment) %>
+  </li>
+</ul>
+<% end %>
+
+
+
+

@@ -1,6 +1,9 @@
-<h1>Doctors</h1>
+<h1>Add Doctor</h1>
 
-<%=  %>
+<%= form_for @appointment do |f| %>
 
+<%= f.label :role %>
+<%= f.text_field :role %>
+<%= f.submit %>
 
-
+<% end %>

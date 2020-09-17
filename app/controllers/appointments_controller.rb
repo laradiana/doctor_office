@@ -2,9 +2,9 @@ class AppointmentsController < ApplicationController
   before_action :set_course
   
   def index
-    # @appointments = @doctor.appointments
+     @appointments = @doctor.appointments
     @doctors = @doctor.appointments.where(role: 'doctor')
-    @clients = @doctor.apointments.where(role: 'client')
+    @clients = @doctor.appointments.where(role: 'client')
   end
 
   def show
