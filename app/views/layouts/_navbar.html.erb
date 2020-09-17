@@ -1,16 +1,29 @@
 <nav>
-  <ul>
-    <li>
-      <%= link_to 'Doctors', doctors_path %>
-    </li>
-    <li>
-      <%= link_to 'Add Doctor', new_doctor_path %>
-    </li>
-    <li>
-      <%= link_to 'Users', users_path %>
-    </li>
-    <li>
-      <%= link_to 'Add User', new_user_path %>
-    </li>
-  </ul>
+  <div class="ui pointing menu">
+  <a class="active item">
+    <%= link_to 'Doctors', doctors_path %>
+  </a>
+  <a class="item">
+  <%= link_to 'Add Doctor', new_doctor_path %>
+  </a>
+  <a class="item">
+    <%= link_to 'Users', users_path %>
+  </a>
+  <a class="item">
+    <%= link_to 'Add User', new_user_path %>
+  </a>
+  <a class="item">
+    <%= link_to 'Make an appointment', appointments_index_path %>
+  <div class="right menu">
+    <div class="item">
+      <div class="ui transparent icon input">
+        <input type="text" placeholder="Search...">
+        <i class="search link icon"></i>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ui segment">
+  <p>Welcome to Diana's and Skyler's Doctor's office</p>
+</div>
 </nav>

@@ -31,7 +31,7 @@ gem 'semantic-ui-sass'
 
 group :development, :test do
  gem 'pry'
- 
+#  gem "simple_calendar", "~> 2.0"
 end
 
 group :development do
